@@ -6,7 +6,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
 }else{
     $controller = 'pages' ;
     $action = 'home' ; 
-}
+}?>
 <html>
 <head></head>
 <body>
