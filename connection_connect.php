@@ -14,5 +14,5 @@ if (!$conn->select_db($dbname)){
 }
 echo "Connected!!!"
 connection_close.php
-$conn->close();
+
 ?>
