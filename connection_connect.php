@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "db21_009";
 $password = "db21_009";
-$dbname = "";
+$dbname = "db21_009";
 
 $conn = new mysqli($servername, $username, $password);
 
@@ -13,6 +13,4 @@ if (!$conn->select_db($dbname)){
     die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected!!!"
-connection_close.php
-$conn->close();
 ?>
