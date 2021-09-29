@@ -13,7 +13,6 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
     controller = pages , action = home 
     <br>[<a href="/school">Home</a>]<br>
     <p> Welcome to our Homepage </p>
-    
 </body>
 </html>
 
