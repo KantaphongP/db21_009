@@ -1,4 +1,4 @@
-<?php>
+<?php
 $controllers = array('pages'=>['home','error']) ; 
 
 function call($controllers ,$action){
