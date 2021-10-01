@@ -12,9 +12,9 @@ function call($controller ,$action){
 
         case "quotation" : require_once("./models/quotation.php") ; $controller = new QuotationController(); break ;
 
-        case "quotation_detail" : require_once("./models/quotation_detail.php") ; $controller = new QuotationDetailController(); break ;
+        case "quotationdetail" : require_once("./models/quotationdetail.php") ; $controller = new QuotationDetailController(); break ;
 
-        case "price_detail" : require_once("./models/price_detail.php") ; $controller = new PriceDetailController(); break ;
+        case "pricedetail" : require_once("./models/pricedetail.php") ; $controller = new PriceDetailController(); break ;
     }
     $controller->{$action}(); 
 }
