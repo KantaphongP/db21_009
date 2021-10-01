@@ -2,7 +2,7 @@
 {
     public function index()
     {
-        $pricedetail_list = Price_detail::getAll();
+        $pricedetail_list = price_detail::getAll();
         require_once("./views/order/index_order.php");
     }
 }?>
