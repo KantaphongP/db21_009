@@ -1,15 +1,15 @@
 <?php
 class Quotation{
-    public $OID;
+    public $QID;
     public $date;
     public $Staff;
     public $customer;
     public $Payment_Type;
     public $detail;
 
-    public function __construct($OID,$date,$Staff,$customer,$Payment_Type,$detail)
+    public function __construct($QID,$date,$Staff,$customer,$Payment_Type,$detail)
     {
-        $this->OID =  $OID;
+        $this->QID =  $QID;
         $this->date = $date;
         $this->Staff = $Staff;
         $this->customer = $customer;
@@ -24,13 +24,13 @@ class Quotation{
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
-            $OID =$my_row[OID];
+            $QID =$my_row[QID];
             $date = $my_row[date];
             $Staff = $my_row[Staff];
             $customer =$my_row[customer];
             $Payment_Type = $my_row[Payment_Type];
             $detail = $my_row[detail];
-            $quotation_list[]= new Quotation($OID,$date,$Staff,$customer,$Payment_Type,$detail);
+            $quotation_list[]= new Quotation($QID,$date,$Staff,$customer,$Payment_Type,$detail);
         }
 
         require("connection_close.php");
