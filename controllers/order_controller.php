@@ -1,6 +1,7 @@
-<?php class OrderController{
+<?php class OrderController
+{
     public function index(){
         $order_list = Order::getAll();
-        require_once("./views/order/index_order.php");
+        require_once("./views/order/Index_order.php");
     }
 }?>
