@@ -2,16 +2,18 @@
 class price_detail{
 public $PriceDetailID;
 public $PRID;
+public $Name
 public $ColorID;
 public $จำนวนเริ่มต้น;
 public $จำนวนสุดท้าย;
 public $price;
 public $สกรีนเพิ่มสีละ;
 
-public function __construct($PriceDetailID,$PRID,$ColorID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ)
+public function __construct($PriceDetailID,$PRID,$Name,$ColorID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ)
 {
     $this->PriceDetailID = $PriceDetailID;
     $this->PRID = $PRID;
+    $this->Name = $Name;
     $this->ColorID = $ColorID;
     $this->จำนวนเริ่มต้น = $จำนวนเริ่มต้น;
     $this->จำนวนสุดท้าย = $จำนวนสุดท้าย;
@@ -29,12 +31,13 @@ public static function getAll(){
     {
         $PriceDetailID =$my_row[PriceDetailID];
         $PRID = $my_row[PRID];
+        $Name = $my_row[Name];
         $ColorID = $my_row[ColorID];
         $จำนวนเริ่มต้น =$my_row[จำนวนเริ่มต้น];
         $จำนวนสุดท้าย = $my_row[จำนวนสุดท้าย];
         $price =$my_row[price];
         $สกรีนเพิ่มสีละ = $my_row[สกรีนเพิ่มสีละ];
-        $pricedetailList[]= new price_detail($PriceDetailID,$PRID,$ColorID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
+        $pricedetailList[]= new price_detail($PriceDetailID,$PRID,$Name,$ColorID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
     }
 
     require("connection_close.php");
