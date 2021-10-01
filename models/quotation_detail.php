@@ -18,7 +18,7 @@ class QuotationDetail{
     }
 
     public static function getAll(){
-        $orderList=[];
+        $quotationdetail_list=[];
         require("connection_connect.php");
         $sql ="select * from Quotation_Detail" ;
         $result=$conn->query($sql);
@@ -30,11 +30,11 @@ class QuotationDetail{
             $Product_Color =$my_row[Product_Color];
             $QTY = $my_row[qty];
             $extra_color = $my_row[extra_color];
-            $orderList[]= new Order($QID,$DetailID,$PRID,$Product_Color,$QTY,$extra_color);
+            $quotationdetail_list[]= new QuotationDetail($QID,$DetailID,$PRID,$Product_Color,$QTY,$extra_color);
         }
 
         require("connection_close.php");
-        return $orderList ;
+        return $quotationdetail_list ;
     }
 }
 ?>
