@@ -28,7 +28,7 @@ class QuotationDetail{
             $DetailID = $my_row[DetailID];
             $PRID = $my_row[PRID];
             $Product_Color =$my_row[Product_Color];
-            $QTY = $my_row[QTY];
+            $QTY = $my_row[qty];
             $extra_color = $my_row[extra_color];
             $orderList[]= new Order($QID,$DetailID,$PRID,$Product_Color,$QTY,$extra_color);
         }
