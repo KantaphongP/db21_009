@@ -3,15 +3,15 @@ class Order{
     public $OID;
     public $date;
     public $StockID;
-    public $amount;
+    public $order_amount;
     public $status;
 
-    public function __construct($OID,$date,$StockID,$amount,$status)
+    public function __construct($OID,$date,$StockID,$order_amount,$status)
     {
         $this->OID =  $OID;
         $this->date = $date;
         $this->StockID = $StockID;
-        $this->amount = $amount;
+        $this->order_amount = $order_amount;
         $this->status = $status;
     }
 
@@ -25,9 +25,9 @@ class Order{
             $OID =$my_row[OID];
             $date = $my_row[date];
             $StockID = $my_row[StockID];
-            $amount =$my_row[order_amount];
+            $order_amount =$my_row[order_amount];
             $status = $my_row[order_status];
-            $orderList[]= new Order($OID,$date,$StockID,$amount,$status);
+            $orderList[]= new Order($OID,$date,$StockID,$order_amount,$status);
         }
 
         require("connection_close.php");
