@@ -4,16 +4,16 @@ class QuotationDetail{
     public $DetailID ; 
     public $PRID ; 
     public $Product_Color ; 
-    public $QTY ; 
+    public $qty ; 
     public $extra_color ; 
 
-    public function __construct($QID,$DetailID,$PRID,$Product_Color,$QTY,$extra_color)
+    public function __construct($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color)
     {
         $this->QID =  $QID;
         $this->DetailID = $DetailID;
         $this->PRID = $PRID;
         $this->Product_Color = $Product_Color;
-        $this->QTY = $QTY;
+        $this->qty= $qty;
         $this->extra_color = $extra_color;
     }
 
@@ -28,9 +28,9 @@ class QuotationDetail{
             $DetailID = $my_row[DetailID];
             $PRID = $my_row[PRID];
             $Product_Color =$my_row[Product_Color];
-            $QTY = $my_row[qty];
+            $qty = $my_row[qty];
             $extra_color = $my_row[extra_color];
-            $quotationdetail_list[]= new QuotationDetail($QID,$DetailID,$PRID,$Product_Color,$QTY,$extra_color);
+            $quotationdetail_list[]= new QuotationDetail($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color);
         }
 
         require("connection_close.php");
