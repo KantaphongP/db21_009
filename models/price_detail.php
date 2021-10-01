@@ -20,7 +20,7 @@ public function __construct($PriceDetailID,$PRID,$ColorID,$จำนวนเร
 }
 
 public static function getAll(){
-    $orderList=[];
+    $pricedetailList=[];
     require("connection_connect.php");
     $sql ="SELECT Price_detail.PriceDetailID,Price_detail.PRID,Product.Name,Price_detail.ColorID,Price_detail.จำนวนเริ่มต้น,Price_detail.จำนวนสุดท้าย,Price_detail.price,Price_detail.สกรีนเพิ่มสีละ 
     FROM Price_detail INNER JOIN Product ON Price_detail.PRID=Product.PRID" ;
@@ -34,11 +34,11 @@ public static function getAll(){
         $จำนวนสุดท้าย = $my_row[จำนวนสุดท้าย];
         $price =$my_row[price];
         $สกรีนเพิ่มสีละ = $my_row[สกรีนเพิ่มสีละ];
-        $pricedetail_list[]= new price_detail($PriceDetailID,$PRID,$ColorID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
+        $pricedetailList[]= new price_detail($PriceDetailID,$PRID,$ColorID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
     }
 
     require("connection_close.php");
-    return $pricedetail_list ;
+    return $pricedetailList ;
 }
 }
 ?>
