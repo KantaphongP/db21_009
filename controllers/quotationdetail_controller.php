@@ -2,6 +2,6 @@
 {
     public function index(){
         $quotationdetail_list = QuotationDetail::getAll();
-        require_once("./views/quotationdetail/index_quotationdetail.php");
+        require_once("./views/quotation_detail/index_quotationdetail.php");
     }
 }?>
