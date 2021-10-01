@@ -1,6 +1,6 @@
 <table border = 1>
     <tr>
-        <td>OID</td>
+        <td>QID</td>
         <td>date</td>
         <td>Staff</td>
         <td>customer</td>
@@ -11,7 +11,7 @@
     </tr>
  <?php foreach($quotation_list as $quotation)
  {
-     echo "<tr><td>$quotation->OID</td>
+     echo "<tr><td>$quotation->QID</td>
      <td>$quotation->date</td>
      <td>$quotation->Staff</td>
      <td>$quotation->customer</td>
