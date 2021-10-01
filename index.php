@@ -10,11 +10,12 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
 <html>
 <head></head>
 <body>
-    controller = pages , action = home 
-    <br>[<a href="http://158.108.207.4/db21/db21_009/?controller=pages&action=home">Home</a>]
-    [<a href="http://158.108.207.4/db21/db21_009/?controller=order&action=index">order</a>]
+    <?php echo "controller = ".$controller.",action=".$action; ?>
     <br>
-    <p> Welcome to  Homepage </p>
+    [<a href="?controller=pages&action=home">Home</a>]
+    [<a href="?controller=order&action=index">Order</a>]
+    <br>
+    
 </body>
 </html>
 
