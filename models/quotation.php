@@ -3,16 +3,16 @@ class Quotation{
     public $QID;
     public $date;
     public $Staff;
-    public $customer;
+    public $Customer;
     public $Payment_Type;
     public $detail;
 
-    public function __construct($QID,$date,$Staff,$customer,$Payment_Type,$detail)
+    public function __construct($QID,$date,$Staff,$Customer,$Payment_Type,$detail)
     {
         $this->QID =  $QID;
         $this->date = $date;
         $this->Staff = $Staff;
-        $this->customer = $customer;
+        $this->Customer = $Customer;
         $this->Payment_Type = $Payment_Type;
         $this->detail = $detail;
     }
@@ -42,7 +42,7 @@ class Quotation{
             $Customer =$my_row[customer];
             $Payment_Type = $my_row[Payment_Type];
             $detail = $my_row[detail];
-            $quotation_list[]= new Quotation($QID,$date,$Staff,$customer,$Payment_Type,$detail);
+            $quotation_list[]= new Quotation($QID,$date,$Staff,$Customer,$Payment_Type,$detail);
         }
 
         require("connection_close.php");
