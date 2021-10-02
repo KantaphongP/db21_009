@@ -1,7 +1,6 @@
 <table border = 1>
     <tr>
         <td>PriceDetailID</td>
-        <td>PRID</td>
         <td>Name</td>
         <td>ColorID</td>
         <td>จำนวนเริ่มต้น</td>
@@ -12,7 +11,6 @@
  <?php foreach($pricedetail_list as $price_detail)
  {
      echo "<tr><td>$price_detail->PriceDetailID</td>
-     <td>$price_detail->PRID</td>
      <td>$price_detail->Name</td>
      <td>$price_detail->ColorID</td>
      <td>$price_detail->จำนวนเริ่มต้น</td>
