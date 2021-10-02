@@ -10,7 +10,7 @@ class Staff{
     public static function getAll(){
         $StaffList=[];
         require("connection_connect.php");
-        $sql ="SELECT Staff.SID,Staff.Name FROM Staff" ;
+        $sql ="SELECT Staff.SID , Staff.Name FROM Staff" ;
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
