@@ -17,7 +17,7 @@
        $จำนวนสุดท้าย = $_GET['จำนวนสุดท้าย'];
        $price = $_GET['price'];
        $สกรีนเพิ่มสีละ = $_GET['สกรีนเพิ่มสีละ'];
-       pricedetail::Add($Name,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
+       price_detail::Add($Name,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
        PriceDetailController::index();
     }
 }?>
