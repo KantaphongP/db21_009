@@ -29,9 +29,9 @@ class Quotation{
         {
             $QID =$my_row[QID];
             $date = $my_row[date];
-            $Staff = $my_row[Staff];
-            $Customer =$my_row[customer];
-            $Payment_Type = $my_row[Payment_Type];
+            $Staff = $my_row[Name];
+            $Customer =$my_row[CName];
+            $Payment_Type = $my_row[Terms];
             $detail = $my_row[detail];
             $quotation_list[]= new Quotation($QID,$date,$Staff,$customer,$Payment_Type,$detail);
         }
