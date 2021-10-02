@@ -1,4 +1,6 @@
 <table border = 1>
+    
+    new quotation <a href="?controller=quotation&action=newQuotation">click</a><br>
     <tr>
         <td>QID</td>
         <td>date</td>

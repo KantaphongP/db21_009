@@ -1,5 +1,6 @@
 <?php
-$controllers = array('pages'=>['home','error'],'quotation' =>['index'],'quotationdetail' =>['index','newQuotationDetail'],'pricedetail' =>['index','newPriceDetail','addPriceDetial']) ; 
+$controllers = array('pages'=>['home','error'],'quotation' =>['index','newQuotation'],'quotationdetail' =>['index'],'pricedetail' =>['index','newPriceDetail']) ; 
+ 
 
 function call($controller ,$action){
     //echo "routes to ".$controller."-".$action."<br>" ;
@@ -8,8 +9,13 @@ function call($controller ,$action){
     {
         case "pages" : $controller = new PagesController() ; break ;
 
-        case "quotation" : require_once("./models/quotation.php") ; $controller = new QuotationController(); break ;
+        case "quotation" : require_once("./models/quotation.php"); 
+                            require_once("./models/staff.php"); 
+                            require_once("./models/customer.php"); 
+                            require_once("./models/paymentterms.php")
+                            $controller = new QuotationController(); break ;
 
+        
         case "quotationdetail" : require_once("./models/quotationdetail.php") ; 
                                  require_once("./models/quotation.php"); 
                                  require_once("./models/product.php"); 
