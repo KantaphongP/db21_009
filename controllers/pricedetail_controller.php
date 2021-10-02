@@ -22,4 +22,9 @@
        price_detail::Add($PRID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
        PriceDetailController::index();
     }
+    public function search(){
+        $key = $_GET['key'];
+        $pricedetail_list = price_detail::search($key);
+        require_once("./views/price_detail/index_pricedetail.php");
+    }
 }?>
