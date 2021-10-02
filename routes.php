@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error'],'quotation' =>['index','newQuotation'],'quotationdetail' =>['index','newQuotationDetail'],'pricedetail' =>['index','newPriceDetail','addPriceDetail']) ; 
+$controllers = array('pages'=>['home','error'],'quotation' =>['index'/*,'newQuotation'*/],'quotationdetail' =>['index','newQuotationDetail'],'pricedetail' =>['index','newPriceDetail','addPriceDetail']) ; 
  
 
 function call($controller ,$action){
@@ -9,10 +9,10 @@ function call($controller ,$action){
     {
         case "pages" : $controller = new PagesController() ; break ;
 
-        case "quotation" : require_once("./models/quotation.php"); 
-                            require_once("./models/staff.php"); 
+        case "quotation" :  require_once("./models/quotation.php"); 
+                            /*require_once("./models/staff.php"); 
                             require_once("./models/customer.php"); 
-                            require_once("./models/paymentterms.php");
+                            require_once("./models/paymentterms.php");*/
                             $controller = new QuotationController(); break ;
 
         
