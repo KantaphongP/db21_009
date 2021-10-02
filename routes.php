@@ -9,7 +9,7 @@ function call($controller ,$action){
     {
         case "pages" : $controller = new PagesController() ; break ;
 
-        case "quotation" : require_once("./models/quotation.php"); 
+        case "quotation" :  require_once("./models/quotation.php"); 
                             require_once("./models/staff.php"); 
                             require_once("./models/customer.php"); 
                             require_once("./models/paymentterms.php");

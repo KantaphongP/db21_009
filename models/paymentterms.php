@@ -1,7 +1,9 @@
 <?php class Payment_Terms{
     public $Terms;
+
     public function __construct($Terms){
         $this->Terms = $Terms;
+        
     }
     public static function getAll(){
         $PaymentTermsList=[];
@@ -10,7 +12,7 @@
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
-            $Terms = $Terms[PRID];
+            $Terms = $my_row[Terms];
             $PaymentTermsList[]= new Payment_Terms($Terms);
         }
     

@@ -8,9 +8,9 @@
 
     public function newQuotation()
     {
-        $staff_list = Staff::getAll();
-        $customer_list = Customer::getAll();
-        $paymentterms_list = Payment_Terms::getAll();
+        $StaffList = Staff::getAll();
+        $CustomerList = Customer::getAll();
+        $PaymentTermsList = Payment_Terms::getAll();
         require_once("./views/quotation/newQuotation.php");
     }
     

@@ -20,7 +20,7 @@ class QuotationDetail{
     public static function getAll(){
         $quotationdetail_list=[];
         require("connection_connect.php");
-        $sql ="select * from Quotation_Detail" ;
+        $sql ="SELECT * FROM Quotation_Detail" ;
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
