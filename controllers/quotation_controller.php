@@ -6,7 +6,7 @@
         
     }
 
-    public function newPriceDetail()
+    public function newQuotation()
     {
         $staff_list = Staff::getAll();
         $customer_list = Customer::getAll();

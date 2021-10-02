@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error'],'quotation' =>['index','newQuotation'],'quotationdetail' =>['index'],'pricedetail' =>['index','newPriceDetail']) ; 
+$controllers = array('pages'=>['home','error'],'quotation' =>['index','newQuotation'],'quotationdetail' =>['index','newPriceDetail'],'pricedetail' =>['index','newPriceDetail','addPriceDetial']) ; 
  
 
 function call($controller ,$action){
