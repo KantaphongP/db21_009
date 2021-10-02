@@ -1,5 +1,7 @@
 <?php class Customer{
-    public $CID,$CName,;
+    public $CID;
+    public $CName;
+    
     public function __construct($CID,$CName){
         $this->CID = $CID;
         $this->CName = $CName;
