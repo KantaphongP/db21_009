@@ -12,4 +12,8 @@
         $productcolor_list = ProductColor::getAll();
         require_once("./views/quotation_detail/newQuotationDetail.php");
     }
+    public function addQuotationDetail()
+    {
+        echo "add" ; 
+    }
 }?>
