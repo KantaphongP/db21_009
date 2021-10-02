@@ -1,5 +1,8 @@
-<?php class Staff{
-    public $SID,$Name;
+<?php 
+class Staff{
+    public $SID;
+    public $Name;
+    
     public function __construct($SID,$Name){
         $this->SID = $SID;
         $this->Name = $Name;
