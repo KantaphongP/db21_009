@@ -6,7 +6,7 @@
         <input type="text" name="key">
         <input type="hidden" name="controller" value="quotation"/>
         <button type="submit" name="action" value="search">
-    search</button>
+    Search</button>
 </form>
 
     <tr>
