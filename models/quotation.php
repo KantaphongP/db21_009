@@ -48,5 +48,18 @@ class Quotation{
         require("connection_close.php");
         return $quotation_list ;
     }
+
+    public static function Add($QID,$date,$Staff,$customer,$Payment_Type,$detail)
+    {
+        //echo "00000";
+        require("connection_connect.php");
+        $sql ="INSERT INTO Quotation(QID,date,Staff,customer,Payment_Type,detail) VALUES 
+        ('$QID','$date','$Staff','$customer','$Payment_Type','$detail')";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return "add success $result rows";
+    }
+
+
 }
 ?>
