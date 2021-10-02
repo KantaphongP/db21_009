@@ -1,4 +1,5 @@
 <form method="get" action="">
+    
     <label>QID <input type="text" name="QID" /> </label><br>
     <label>date <input type="text" name="date" /> </label><br>
     <label>Staff <select name="SID">
