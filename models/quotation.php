@@ -20,7 +20,10 @@ class Quotation{
     public static function getAll(){
         $quotation_list=[];
         require("connection_connect.php");
-        $sql ="select * from Quotation" ;
+        $sql ="SELECT Qc.QID , Qc.date , Qc.Name , Qc.CName ,Payment_Terms.Terms , Qc.detail
+        FROM (SELECT Q.QID , Q.date , Q.Name , Customer.CName ,Q.Payment_type , Q.detail
+        FROM (SELECT Quotation.QID ,Quotation.date , Staff.Name ,Quotation.customer , Quotation.Payment_Type ,Quotation.detail
+        FROM Quotation INNER JOIN Staff ON Quotation.Staff =Staff.SID) AS Q INNER JOIN Customer ON Q.customer = Customer.CID) AS Qc INNER JOIN Payment_Terms ON Qc.Payment_Type = Payment_Terms.Terms" ;
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
