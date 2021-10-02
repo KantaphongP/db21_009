@@ -34,5 +34,14 @@ class price_detail{
         require("connection_close.php");
         return $pricedetailList ;
     }
+    public static function Add($Name,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ)
+    {
+        require("connection_connect.php");
+        $sql ="insert into price_detail(Name,จำนวนเริ่มต้น,จำนวนสุดท้าย,price,สกรีนเพิ่มสีละ) values 
+        ('Name'),('จำนวนเริ่มต้น'),('จำนวนสุดท้าย'),('price'),('สกรีนเพิ่มสีละ')";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return "add success $result rows";
+    }
 }
 ?>
