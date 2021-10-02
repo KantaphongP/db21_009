@@ -12,7 +12,7 @@ function call($controller ,$action){
         case "quotation" : require_once("./models/quotation.php"); 
                             require_once("./models/staff.php"); 
                             require_once("./models/customer.php"); 
-                            require_once("./models/paymentterms.php")
+                            require_once("./models/paymentterms.php");
                             $controller = new QuotationController(); break ;
 
         
