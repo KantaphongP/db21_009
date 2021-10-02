@@ -10,9 +10,14 @@ function call($controller ,$action){
 
         case "quotation" : require_once("./models/quotation.php") ; $controller = new QuotationController(); break ;
 
-        case "quotationdetail" : require_once("./models/quotationdetail.php") ; $controller = new QuotationDetailController(); break ;
+        case "quotationdetail" : require_once("./models/quotationdetail.php") ; 
+                                 require_once("./models/quotation.php"); 
+                                 require_once("./models/product.php"); 
+                                 require_once("./models/productcolor.php"); 
+                                 $controller = new QuotationDetailController(); break ;
 
-        case "pricedetail" : require_once("./models/pricedetail.php"); require_once("./models/product.php"); $controller = new PriceDetailController(); break ;
+        case "pricedetail" : require_once("./models/pricedetail.php"); 
+                             require_once("./models/product.php"); $controller = new PriceDetailController(); break ;
     }
     $controller->{$action}(); 
 }
