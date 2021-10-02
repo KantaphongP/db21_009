@@ -6,7 +6,7 @@
     <label>Customer <select name="SID">
         <?php foreach($customer_list as $Customer){echo "<option value= $Customer->CID>$Customer->CName</option>";}?></select></label><br>
     <label>Payment_Terms <select name="Terms">
-        <?php foreach($paymentterms_list as $Payment_Type){echo "<option value= $Payment_Type->Terms</option>";}?></select></label><br>
+        <?php foreach($paymentterms_list as $Payment_Type){echo "<option value= $Payment_Type->Terms>$Payment_Type->Terms</option>";}?></select></label><br>
     
     <label>detail <input type="text" name="detail" /> </label><br>
     
