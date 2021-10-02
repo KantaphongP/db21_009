@@ -16,8 +16,8 @@ new quotation_detail <a href="?controller=quotationdetail&action=newQuotationDet
     <td>$quotationdetail->DetailID</td>
     <td>$quotationdetail->PRID</td>
     <td>$quotationdetail->Product_Color</td>
-    <td> $quotationdetail->qty</td>
-    <td> $quotationdetail->extra_color</td>
+    <td>$quotationdetail->qty</td>
+    <td>$quotationdetail->extra_color</td>
     <td> update </td>
     <td> delete </td>
     </tr>";    
