@@ -14,6 +14,26 @@
         require_once("./views/quotation/newQuotation.php");
     }
     
+    public function addQuotation()
+    {
+        $QID = $_GET[QID];
+        $date = $_GET[date];
+        $Staff = $_GET[Name];
+        $customer = $_GET[CName];
+        $Payment_Type = $_GET[Terms];
+        $detail = $_GET[detail];
+        Quotation::Add($QID,$date,$Staff,$customer,$Payment_Type,$detail);
+
+        QuotationController::index();
+    }
+
+    public function search()
+    {
+        $key = $_GET['key'];
+        $quotation_list = Quotation::search($key);
+        require_once('./views/quotation/index_quotation.php');
+    }
+
 
 
 
