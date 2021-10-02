@@ -1,4 +1,5 @@
 <table border = 1>
+    new price_detail <a href="?controller=pricedetail&action=newPricedetail">click</a><br>
     <tr>
         <td>PriceDetailID</td>
         <td>Name</td>
