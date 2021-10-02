@@ -6,8 +6,8 @@
         <input type="text" name="key">
         <input type="hidden" name="controller" value="quotation"/>
         <button type="submit" name="action" value="search">
-    Search</button>
-</form>
+    search</button>
+    </form>
 
     <tr>
         <td>QID</td>
