@@ -6,14 +6,14 @@
         
     }
 
-    public function newQuotation()
+    /*public function newQuotation()
     {
         $StaffList = Staff::getAll();
         $CustomerList = Customer::getAll();
         $PaymentTermsList = Payment_Terms::getAll();
         require_once("./views/quotation/newQuotation.php");
     }
-    
+    */
 
 
 
