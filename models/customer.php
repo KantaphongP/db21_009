@@ -8,7 +8,7 @@
     public static function getAll(){
         $CustomerList=[];
         require("connection_connect.php");
-        $sql ="SELECT Customer.CID , Customer.CName ,Customer.Tel FROM Customer" ;
+        $sql ="SELECT Customer.CID , Customer.CName FROM Customer" ;
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
