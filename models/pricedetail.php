@@ -34,6 +34,21 @@ class price_detail{
         require("connection_close.php");
         return $pricedetailList ;
     }
+    public static function get($Name)
+    {
+        require("connection_connect.php");
+        $sql = "SELECT DISTINCT Product.Name,Price_detail.จำนวนเริ่มต้น,Price_detail.จำนวนสุดท้าย,Price_detail.price,Price_detail.สกรีนเพิ่มสีละ 
+        FROM Price_detail INNER JOIN Product ON Price_detail.PRID=Product.PRID";
+        $result=$conn->query($sql);
+        $my_row=$result->fetch_assoc();
+        $Name = $my_row[Name];
+        $จำนวนเริ่มต้น =$my_row[จำนวนเริ่มต้น];
+        $จำนวนสุดท้าย = $my_row[จำนวนสุดท้าย];
+        $price =$my_row[price];
+        $สกรีนเพิ่มสีละ = $my_row[สกรีนเพิ่มสีละ];
+        require("connection_close.php");
+        return new price_detail($Name,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
+    }
     public static function Add($Name,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ)
     {
         require("connection_connect.php");
