@@ -21,6 +21,7 @@
        $price = $_GET['price'];
        $สกรีนเพิ่มสีละ = $_GET['สกรีนเพิ่มสีละ'];
        price_detail::Add($PriceDetailID,$PRID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
+       
        PriceDetailController::index();
     }
     public function search(){
@@ -47,5 +48,11 @@
        $สกรีนเพิ่มสีละ = $_GET['สกรีนเพิ่มสีละ'];
        price_detail::update($PriceDetailID,$PRID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
        PriceDetailController::index();
+    }
+    public function deleteConfirm(){
+        //echo " tttttt ";
+        $PriceDetailID = $_GET['PriceDetailID'];
+        $price_detail = price_detail::get($PriceDetailID);
+        require_once("./views/price_detail/deleteConfirm.php");
     }
 }?>
