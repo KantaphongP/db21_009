@@ -89,6 +89,7 @@ class price_detail{
     }
     public static function update($PriceDetailID,$PRID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ)
     {
+        //echo "00000";
         require("connection_connect.php");
         $sql ="UPDATE Price_detail SET PriceDetailID='$PriceDetailID',PRID='$PRID',จำนวนเริ่มต้น='$จำนวนเริ่มต้น',จำนวนสุดท้าย='$จำนวนสุดท้าย',price='$price',สกรีนเพิ่มสีละ='$สกรีนเพิ่มสีละ' WHERE PriceDetailID = '$PriceDetailID'";
         $result=$conn->query($sql);
