@@ -27,4 +27,10 @@
         $pricedetail_list = price_detail::search($key);
         require_once("./views/price_detail/index_pricedetail.php");
     }
+    public function updateForm(){
+        $PRID = $_GET['PRID'];
+        $price_detail = price_detail::get($PRID);
+        $product_list = Product::getAll();
+        require_once("./views/price_detail/updateForm.php");
+    }
 }?>
