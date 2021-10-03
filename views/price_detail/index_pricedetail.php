@@ -8,10 +8,12 @@
     <tr>
         <td>PRID</td>
         <td>Name</td>
-        <td>จำนวนเริ่มต้น</td>
-        <td>จำนวนสุดท้าย</td>
+        <td>MIN</td>
+        <td>MAX</td>
         <td>price</td>
         <td>สกรีนเพิ่มสีละ</td>
+        <td>update</td>
+        <td>delete</td>
     </tr>
  <?php foreach($pricedetail_list as $price_detail)
  {
@@ -21,7 +23,7 @@
      <td>$price_detail->จำนวนสุดท้าย</td>
      <td>$price_detail->price</td>
      <td>$price_detail->สกรีนเพิ่มสีละ</td>
-     <td><a href=?controller=pricedetail&action=updateForm&PRID=$price_detail->PRID>update</a> </td>
+     <td><a href=?controller=pricedetail&action=updateForm&PRID=$price_detail->PRID>update</a></td>
      <td> delete </td> </tr>";
  }
  echo "</table>";
