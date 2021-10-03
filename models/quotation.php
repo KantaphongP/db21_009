@@ -51,7 +51,7 @@ class Quotation{
         ('$QID','$date','$Staff','$customer','$Payment_Type','$detail')";
         $result=$conn->query($sql);
         require("connection_close.php");
-        return "add success $result rows";
+        return "Add success $result rows";
     }
 
     /*public static function get($Staff,$customer,){
