@@ -4,7 +4,7 @@
     <label>Product <select name="PRID">
         <?php foreach($product_list as $product)
             {echo "<option value= $product->PRID";
-                if($product->PRID==$price_detail->PRID){echo "selected='selected'";}
+                if($product->PRID==$price_detail->PRID){echo " selected='selected'";}
                 echo ">$product->Name</option>";
             }?>
         </select></label><br>  
@@ -17,6 +17,7 @@
     <label>extra <input type="text" name="สกรีนเพิ่มสีละ" 
             value="<?php echo $price_detail->สกรีนเพิ่มสีละ; ?>" /> </label><br>
     <input type="hidden" name="controller" value="pricedetail"/>
+    <input type="hidden" name="ID" value="<?php echo $price_detail->PriceDetailID;?>" />
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="update">update</button>
 </form>

@@ -38,15 +38,16 @@
     }
     public function update()
     {
-       //echo "000000";
+
        $PriceDetailID = $_GET['PriceDetailID'];
+       $NEWID = $_GET['ID'];
        $PRID = $_GET['PRID'];
        //$Name = $_GET['Name'];
        $จำนวนเริ่มต้น = $_GET['จำนวนเริ่มต้น'];
        $จำนวนสุดท้าย = $_GET['จำนวนสุดท้าย'];
        $price = $_GET['price'];
        $สกรีนเพิ่มสีละ = $_GET['สกรีนเพิ่มสีละ'];
-       price_detail::update($PriceDetailID,$PRID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ);
+       price_detail::update($PriceDetailID,$PRID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ,$NEWID);
        PriceDetailController::index();
     }
     public function deleteConfirm(){
