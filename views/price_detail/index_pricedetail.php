@@ -21,7 +21,7 @@
      <td>$price_detail->จำนวนสุดท้าย</td>
      <td>$price_detail->price</td>
      <td>$price_detail->สกรีนเพิ่มสีละ</td>
-     <td> update </td>
+     <td><a href=?controller=pricedetail&action=updateForm&PRID=$price_detail->PRID>update</a> </td>
      <td> delete </td> </tr>";
  }
  echo "</table>";
