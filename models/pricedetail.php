@@ -22,7 +22,8 @@ class price_detail{
     public static function getAll(){
         $pricedetailList=[];
         require("connection_connect.php");
-        $sql ="SELECT Price_detail.PriceDetailID,Product.PRID,Product.Name,Price_detail.จำนวนเริ่มต้น,Price_detail.จำนวนสุดท้าย,Price_detail.price,Price_detail.สกรีนเพิ่มสีละ FROM Price_detail NATURAL JOIN Product" ;
+        $sql ="SELECT Price_detail.PriceDetailID,Product.PRID,Product.Name,Price_detail.จำนวนเริ่มต้น,
+        Price_detail.จำนวนสุดท้าย,Price_detail.price,Price_detail.สกรีนเพิ่มสีละ FROM Price_detail NATURAL JOIN Product" ;
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
@@ -43,7 +44,8 @@ class price_detail{
     {
         //echo"iiiiii";
         require("connection_connect.php");
-        $sql = "SELECT Price_detail.PriceDetailID,Product.PRID,Product.Name,Price_detail.จำนวนเริ่มต้น,Price_detail.จำนวนสุดท้าย,Price_detail.price,Price_detail.สกรีนเพิ่มสีละ FROM Price_detail NATURAL JOIN Product where PriceDetailID = '$PriceDetailID'";
+        $sql = "SELECT Price_detail.PriceDetailID,Product.PRID,Product.Name,Price_detail.จำนวนเริ่มต้น,Price_detail.จำนวนสุดท้าย,Price_detail.price,Price_detail.สกรีนเพิ่มสีละ 
+        FROM Price_detail NATURAL JOIN Product WHERE PriceDetailID = '$PriceDetailID'";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
         $PriceDetailID = $my_row[PriceDetailID];
@@ -87,15 +89,26 @@ class price_detail{
         require("connection_close.php");
         return $pricedetailList ;
     }
-    public static function update($PriceDetailID,$PRID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ)
+    public static function update($PriceDetailID,$PRID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ,$NEWID)
     {
         //echo "00000";
         require("connection_connect.php");
-        $sql ="UPDATE Price_detail SET PriceDetailID='$PriceDetailID',PRID='$PRID',จำนวนเริ่มต้น='$จำนวนเริ่มต้น',จำนวนสุดท้าย='$จำนวนสุดท้าย',price='$price',สกรีนเพิ่มสีละ='$สกรีนเพิ่มสีละ' WHERE PriceDetailID = '$PriceDetailID'";
+        $sql ="UPDATE `Price_detail` SET `PriceDetailID`='$PriceDetailID',`PRID`='$PRID',
+        `จำนวนเริ่มต้น`=$จำนวนเริ่มต้น,`จำนวนสุดท้าย`=$จำนวนสุดท้าย,`price`=$price,`สกรีนเพิ่มสีละ`=$สกรีนเพิ่มสีละ 
+        WHERE `PriceDetailID` = '$NEWID'";
         $result=$conn->query($sql);
         require("connection_close.php");
         return "update success $result row";
     }
 
+    public static function delete($PriceDetailID)
+    {
+        //echo "00000";
+        require("connection_connect.php");
+        $sql ="DELETE from Price_detail WHERE PriceDetailID='$PriceDetailID' ";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return "delete success $result rows";
+    }
 }
 ?>
