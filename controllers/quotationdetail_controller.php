@@ -42,4 +42,15 @@
             $productcolor_list = ProductColor::getAll();
             require_once("./views/quotation_detail/updateForm.php");
     }
+
+    public function update(){
+        $QID = $_GET['QID'];
+        $DetailID = $_GET['DetailID']; 
+        $PRID = $_GET['PRID']; 
+        $Product_Color = $_GET['Product_Color']; 
+        $qty = $_GET['qty']; 
+        $extra_color = $_GET['extra_color'];
+        QuotationDetail::update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color) ; 
+        QuotationDetailController::index() ; 
+    }
 }?>
