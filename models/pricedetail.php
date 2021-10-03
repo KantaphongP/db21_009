@@ -108,7 +108,7 @@ class price_detail{
         $sql ="DELETE from Price_detail WHERE PriceDetailID='$PriceDetailID' ";
         $result=$conn->query($sql);
         require("connection_close.php");
-        return "delete success $result rows";
+        return "delete success $result row";
     }
 }
 ?>
