@@ -10,7 +10,7 @@
     <label>qty<input type="text" name="qty" /> </label><br>
     <label>extra_color<input type="text" name="extra_color" /> </label><br>
     
-    <input type="hidden" name="controller" value="quotation_detail"/>
+    <input type="hidden" name="controller" value="quotationdetail"/>
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="addQuotationDetail">Save</button>
     
