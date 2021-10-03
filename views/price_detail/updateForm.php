@@ -1,4 +1,6 @@
 <form method="get" action="">
+    <label>ID <input type="text" name="PriceDetailID"
+            value="<?php echo $price_detail->PriceDetailID; ?>" /> </label><br>
     <label>Product <select name="PRID">
         <?php foreach($product_list as $product)
             {echo "<option value= $product->PRID";
@@ -7,14 +9,15 @@
             }?>
         </select></label><br>  
     <label>min <input type="text" name="จำนวนเริ่มต้น"
-            value="<?php echo $price_detail->จำนวนเริ่มต้น ?>" /> </label><br>
+            value="<?php echo $price_detail->จำนวนเริ่มต้น; ?>" /> </label><br>
     <label>max <input type="text" name="จำนวนสุดท้าย"
-            value="<?php echo $price_detail->จำนวนสุดท้าย ?>" /> </label><br>
+            value="<?php echo $price_detail->จำนวนสุดท้าย; ?>" /> </label><br>
     <label>price <input type="text" name="price" 
-            value="<?php echo $price_detail->price ?>" /> </label><br> 
+            value="<?php echo $price_detail->price; ?>" /> </label><br> 
     <label>extra <input type="text" name="สกรีนเพิ่มสีละ" 
-            value="<?php echo $price_detail->สกรีนเพิ่มสีละ ?>" /> </label><br>
+            value="<?php echo $price_detail->สกรีนเพิ่มสีละ; ?>" /> </label><br>
     <input type="hidden" name="controller" value="pricedetail"/>
+
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="update">update</button>
 </form>
