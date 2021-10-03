@@ -91,10 +91,17 @@ class price_detail{
     {
         //echo "00000";
         require("connection_connect.php");
-        $sql ="UPDATE Price_detail SET PriceDetailID='$PriceDetailID',PRID='$PRID',จำนวนเริ่มต้น='$จำนวนเริ่มต้น',จำนวนสุดท้าย='$จำนวนสุดท้าย',price='$price',สกรีนเพิ่มสีละ='$สกรีนเพิ่มสีละ' WHERE PriceDetailID = '$PriceDetailID'";
+        $sql ="UPDATE Price_detail SET PriceDetailID= '$PriceDetailID',PRID='$PRID',จำนวนเริ่มต้น='$จำนวนเริ่มต้น',จำนวนสุดท้าย='$จำนวนสุดท้าย',price='$price',สกรีนเพิ่มสีละ='$สกรีนเพิ่มสีละ' WHERE PriceDetailID = '$PriceDetailID'";
         $result=$conn->query($sql);
         require("connection_close.php");
         return "update success $result row";
+    }
+    public static function delete($PriceDetailID){
+        require("connection_connect.php");
+        $sql ="DELETE FROM Price_detail Where PriceDetailID='$PriceDetailID'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return "delete success $result row";
     }
 
 }
