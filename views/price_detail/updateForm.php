@@ -17,6 +17,7 @@
     <label>extra <input type="text" name="สกรีนเพิ่มสีละ" 
             value="<?php echo $price_detail->สกรีนเพิ่มสีละ; ?>" /> </label><br>
     <input type="hidden" name="controller" value="pricedetail"/>
+    <input type="hidden" name="PriceDetailID" value="<?php echo $price_detail->PriceDetailID;?>"/>
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="update">update</button>
 </form>
