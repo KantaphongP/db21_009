@@ -11,7 +11,7 @@
 
     <tr>
         <td>QID</td>
-        <td>dates</td>
+        <td>date</td>
         <td>Staff</td>
         <td>customer</td>
         <td>Payment_Type</td>
@@ -22,13 +22,13 @@
  <?php foreach($quotation_list as $quotation)
  {
      echo "<tr><td>$quotation->QID</td>
-     <td>$quotation->dates</td>
+     <td>$quotation->date</td>
      <td>$quotation->Staff</td>
      <td>$quotation->customer</td>
      <td>$quotation->Payment_Type</td>
      <td>$quotation->detail</td>
      <td> update </td>
-     <td> delete </td> </tr>";
+     <td><a href=?controller=quotation&action=deleteConfirm&QID=$Quotation->QID>delete</a> </td> </tr>";
  }
  echo "</table>";
  ?>
