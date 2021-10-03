@@ -38,7 +38,7 @@
     }
     public function update()
     {
-       //echo "000000";
+
        $PriceDetailID = $_GET['PriceDetailID'];
        $NEWID = $_GET['ID'];
        $PRID = $_GET['PRID'];
