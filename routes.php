@@ -1,7 +1,7 @@
 <?php
 $controllers = array('pages'=>['home','error'],
-'quotation' =>['index','newQuotation', 'addQuotation','search'],
-'quotationdetail' =>['index','newQuotationDetail','addQuotationDetail','search','updateForm'],
+'quotation' =>['index','newQuotation', 'addQuotation','search','delete','delectCornfirm'],
+'quotationdetail' =>['index','newQuotationDetail','addQuotationDetail','search','updateForm','update'],
 'pricedetail' =>['index','newPriceDetail','addPriceDetail','search','updateForm','update','deleteConfirm','delete']) ; 
 
  
