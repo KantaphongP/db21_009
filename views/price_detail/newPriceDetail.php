@@ -1,4 +1,5 @@
 <form method="get" action="">
+    <label>ID <input type="text" name="PriceDetailID" /> </label><br>
     <label>Product <select name="PRID">
         <?php foreach($product_list as $product){echo "<option value= $product->PRID>$product->Name</option>";}?></select></label><br>
     <label>min <input type="text" name="จำนวนเริ่มต้น" /> </label><br>
