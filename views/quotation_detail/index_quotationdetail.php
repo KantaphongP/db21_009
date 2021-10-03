@@ -1,5 +1,11 @@
 <table border = 1>
-new quotation_detail <a href="?controller=quotationdetail&action=newQuotationDetail">click</a><br>
+    new quotation_detail <a href="?controller=quotationdetail&action=newQuotationDetail">click</a><br>
+    <form method="get" action="">
+        <input type="text" name="key">
+        <input type="hidden" name="controller" value="quotationdetail"/>
+        <button type="submit" name="action" value="search">
+    Search</button>
+    </form>
 <tr>
     <td>QID</td>
     <td>DetailID</td>
