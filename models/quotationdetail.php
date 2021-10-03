@@ -17,6 +17,23 @@ class QuotationDetail{
         $this->extra_color = $extra_color;
     }
 
+    public static function get($QID , $DetailID){
+        require("connection_connect.php") ; 
+        $sql = "SELECT * FROM Quotation_Detail WHERE QID = $QID AND DetailID = $DetailID" ; 
+        $result = $conn->query($sql);
+        $my_row = $result->fetch_assoc() ; 
+        $QID =$my_row[QID];
+        $DetailID = $my_row[DetailID];
+        $PRID = $my_row[PRID];
+        $Product_Color =$my_row[Product_Color];
+        $qty = $my_row[qty];
+        $extra_color = $my_row[extra_color];
+
+        require("connection_close.php");
+        return new QuotationDetail($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color) ;
+
+    }
+
     public static function getAll(){
         $quotationdetail_list=[];
         require("connection_connect.php");
