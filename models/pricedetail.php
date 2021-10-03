@@ -38,8 +38,9 @@ class price_detail{
     }
     public static function get($PRID)
     {
+        //echo"iiiiii";
         require("connection_connect.php");
-        $sql = "SELECT Price_detail.PRID,Product.Name,Price_detail.จำนวนเริ่มต้น,Price_detail.จำนวนสุดท้าย,Price_detail.price,Price_detail.สกรีนเพิ่มสีละ FROM Price_detail INNER JOIN Product ON Product.PRID=Price_detail.PRID";
+        $sql = "SELECT Price_detail.PRID,Product.Name,Price_detail.จำนวนเริ่มต้น,Price_detail.จำนวนสุดท้าย,Price_detail.price,Price_detail.สกรีนเพิ่มสีละ FROM Product,Price_detail WHERE Product.PRID = Price_detail.PRID AND Price_detail.PRID = '$PRID'";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
         $PRID = $my_row[PRID];
@@ -86,7 +87,7 @@ class price_detail{
     public static function update($PRID,$จำนวนเริ่มต้น,$จำนวนสุดท้าย,$price,$สกรีนเพิ่มสีละ)
     {
         require("connection_connect.php");
-        $sql ="UPDATE Price_detail SET จำนวนเริ่มต้น='$จำนวนเริ่มต้น',จำนวนสุดท้าย='$จำนวนสุดท้าย',price='$price',สกรีนเพิ่มสีละ=$สกรีนเพิ่มสีละ' WHERE PRID='$PRID' AND จำนวนเริ่มต้น='$จำนวนเริ่มต้น'";
+        $sql ="UPDATE Price_detail SET PRID='$PRID',จำนวนเริ่มต้น='$จำนวนเริ่มต้น',จำนวนสุดท้าย='$จำนวนสุดท้าย',price='$price',สกรีนเพิ่มสีละ='$สกรีนเพิ่มสีละ' WHERE Price_detail.PRID = '$PRID'";
         $result=$conn->query($sql);
         require("connection_close.php");
         return "update success $result row";
