@@ -35,7 +35,23 @@
     {
         $key = $_GET['key'];
         $quotation_list = Quotation::search($key);
-        require_once('./views/quotation/index_quotation.php');
+        require_once("./views/quotation/index_quotation.php");
+    }
+
+    public function deleteConfirm(){
+        echo " tttttttt ";
+        $QID = $_GET['QID'];
+        $quotation =Quotation::get($QID);
+        require_once("./views/quotation/deleteConfirm.php");
+
+    }
+
+    public function delete(){
+
+        $QID = $_GET['QID'];
+        quotation::delete($QID);
+        QuotationController::index();
+        
     }
 
 
