@@ -14,7 +14,6 @@
     }
     public function addQuotationDetail()
     {
-        
         $QID = $_GET['QID'];
         $DetailID = $_GET['DetailID']; 
         $PRID = $_GET['PRID']; 
@@ -44,14 +43,16 @@
     }
 
     public function update(){
-        
         $QID = $_GET['QID'];
-        $DetailID = $_GET['DetailID']; 
+        //$newID = $_GET['QIDD'] ; 
+        $DetailID = $_GET['DetailID'];
+        //$newDID = $_GET['DetailIDD'] ;  
         $PRID = $_GET['PRID']; 
         $Product_Color = $_GET['Product_Color']; 
         $qty = $_GET['qty']; 
         $extra_color = $_GET['extra_color'];
-        QuotationDetail::update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color) ; 
-        QuotationDetailController::index() ; 
+        $up = QuotationDetail::update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color) ; 
+        echo $up ; 
+        QuotationDetailController::index(); 
     }
 }?>
