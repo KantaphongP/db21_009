@@ -23,7 +23,8 @@ class Quotation{
         $sql = "SELECT DISTINCT Qc.QID , Qc.date , Qc.Name , Qc.CName ,Payment_Terms.Terms , Qc.detail
         FROM (SELECT Q.QID , Q.date , Q.Name , Customer.CName ,Q.Payment_type , Q.detail
         FROM (SELECT Quotation.QID ,Quotation.date , Staff.Name ,Quotation.customer , Quotation.Payment_Type ,Quotation.detail
-        FROM Quotation INNER JOIN Staff ON Quotation.Staff =Staff.SID) AS Q INNER JOIN Customer ON Q.customer = Customer.CID) AS Qc INNER JOIN Payment_Terms ON Qc.Payment_Type = Payment_Terms.Terms" ;
+        FROM Quotation INNER JOIN Staff ON Quotation.Staff =Staff.SID) AS Q INNER JOIN Customer 
+        ON Q.customer = Customer.CID) AS Qc INNER JOIN Payment_Terms ON Qc.Payment_Type = Payment_Terms.Terms" ;
         /*$sql ="select * from Quotation" ;*/
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
@@ -51,7 +52,7 @@ class Quotation{
 
     public static function Add($QID,$date,$Staff,$customer,$Payment_Type,$detail)
     {
-        //echo "00000";
+        
         require("connection_connect.php");
         $sql ="INSERT INTO Quotation(QID,date,Staff,customer,Payment_Type,detail) VALUES 
         ('$QID','$date','$Staff','$customer','$Payment_Type','$detail')";
@@ -66,8 +67,10 @@ class Quotation{
         $sql = "SELECT DISTINCT Qc.QID , Qc.date , Qc.Name , Qc.CName ,Payment_Terms.Terms , Qc.detail
         FROM (SELECT Q.QID , Q.date , Q.Name , Customer.CName ,Q.Payment_type , Q.detail
         FROM (SELECT Quotation.QID ,Quotation.date , Staff.Name ,Quotation.customer , Quotation.Payment_Type ,Quotation.detail
-        FROM Quotation INNER JOIN Staff ON Quotation.Staff =Staff.SID) AS Q INNER JOIN Customer ON Q.customer = Customer.CID) AS Qc INNER JOIN Payment_Terms ON Qc.Payment_Type = Payment_Terms.Terms
-        Where (Qc.QID LIKE '%$key' OR Qc.date LIKE '%$key' OR Qc.Name LIKE '%$key' OR Qc.CName LIKE '%$key' OR Payment_Terms.Terms LIKE '%$key' OR Qc.detail )";
+        FROM Quotation INNER JOIN Staff ON Quotation.Staff =Staff.SID) AS Q INNER JOIN Customer 
+        ON Q.customer = Customer.CID) AS Qc INNER JOIN Payment_Terms ON Qc.Payment_Type = Payment_Terms.Terms
+        where (Qc.QID LIKE '%$key%' OR Qc.date LIKE '%$key%' OR Qc.Name LIKE '%$key%' OR Qc.CName LIKE '%$key%' 
+        OR Payment_Terms.Terms LIKE '%$key%' OR Qc.detail LIKE '%$key%')";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
