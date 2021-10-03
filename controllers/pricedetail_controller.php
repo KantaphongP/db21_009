@@ -55,4 +55,11 @@
         $price_detail = price_detail::get($PriceDetailID);
         require_once("./views/price_detail/deleteConfirm.php");
     }
+    public function delete()
+    {
+       //echo "000000";
+       $PriceDetailID = $_GET['PriceDetailID'];
+       price_detail::delete($PriceDetailID);
+       PriceDetailController::index();
+    }
 }?>
