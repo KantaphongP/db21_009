@@ -2,7 +2,7 @@
 $controllers = array('pages'=>['home','error'],
 'quotation' =>['index','newQuotation', 'addQuotation','search'],
 'quotationdetail' =>['index','newQuotationDetail'],
-'pricedetail' =>['index','newPriceDetail','addPriceDetail','search']) ; 
+'pricedetail' =>['index','newPriceDetail','addPriceDetail','search','updateForm','update']) ; 
 
  
 
