@@ -1,7 +1,7 @@
 <form method="get" action="">
     
     <label>QID <input type="text" name="QID" /> </label><br>
-    <label>date <input type="text" name="date" /> </label><br>
+    <label>date <input type="text" name="dates" /> </label><br>
     <label>Staff <select name="SID">
         <?php foreach($StaffList as $Staff){echo "<option value= $Staff->SID>$Staff->Name</option>";}?></select></label><br>
     <label>Customer <select name="SID">
