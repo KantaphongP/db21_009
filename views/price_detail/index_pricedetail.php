@@ -6,6 +6,7 @@
         <button type="submit" name="action" value="search">Search</button>
     </form>
     <tr>
+        <td>ID</td>
         <td>PRID</td>
         <td>Name</td>
         <td>MIN</td>
@@ -17,14 +18,15 @@
     </tr>
  <?php foreach($pricedetail_list as $price_detail)
  {
-     echo "<tr><td>$price_detail->PRID</td>
+     echo "<tr><td>$price_detail->PriceDetailID</td>
+     <td>$price_detail->PRID</td>
      <td>$price_detail->Name</td>
      <td>$price_detail->จำนวนเริ่มต้น</td>
      <td>$price_detail->จำนวนสุดท้าย</td>
      <td>$price_detail->price</td>
      <td>$price_detail->สกรีนเพิ่มสีละ</td>
-     <td><a href=?controller=pricedetail&action=updateForm&PRID=$price_detail->PRID>update</a></td>
-     <td> delete </td> </tr>";
+     <td><a href=?controller=pricedetail&action=updateForm&PriceDetailID=$price_detail->PriceDetailID>update</a></td>
+     <td><a href=?controller=pricedetail&action=deleteConfirm&PriceDetailID=$price_detail->PriceDetailID>delete</a> </td> </tr>";
  }
  echo "</table>";
  ?>
