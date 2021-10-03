@@ -18,20 +18,17 @@ class QuotationDetail{
     }
 
     public static function get($QID , $DetailID){
-        require("connection_connect.php") ; 
-        $sql = "SELECT * FROM Quotation_Detail WHERE QID = $QID AND DetailID = $DetailID" ; 
-        $result = $conn->query($sql);
-        $my_row = $result->fetch_assoc() ; 
+        require("connection_connect.php");
+        $sql ="SELECT * FROM Quotation_Detail WHERE QID = $QID AND DetailID = $DetailID" ;
+        $result=$conn->query($sql);
         $QID =$my_row[QID];
         $DetailID = $my_row[DetailID];
         $PRID = $my_row[PRID];
         $Product_Color =$my_row[Product_Color];
         $qty = $my_row[qty];
         $extra_color = $my_row[extra_color];
-
         require("connection_close.php");
-        return new QuotationDetail($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color) ;
-
+        return new QuotationDetail($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color);
     }
 
     public static function getAll(){
@@ -61,6 +58,14 @@ class QuotationDetail{
         $result=$conn->query($sql);
         require("connection_close.php");
         return "add success $result rows";
+    }
+
+    public static function update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color){
+        require("connection_connect.php");
+        $sql = "UPDATE Quotation_Detail SET QID = '$QID' , DetailID = '$DetailID',PRID = '$PRID',Product_Color = '$Product_Color',qty = '$qty',extra_color = '$extra_color' WHERE QID = '$QID' AND DetailID = '$DetailID'" ;
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return "update success $result row";
     }
 
     public static function search($key)
