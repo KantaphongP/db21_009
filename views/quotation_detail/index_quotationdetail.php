@@ -13,7 +13,7 @@
     <td>Product_Color</td>
     <td>qty</td>
     <td>extra_color</td>
-    <td> update </td>
+    <td> update</td>
     <td> delete </td>
 </tr>
 <?php foreach($quotationdetail_list as $quotationdetail){
@@ -24,7 +24,7 @@
     <td>$quotationdetail->Product_Color</td>
     <td>$quotationdetail->qty</td>
     <td>$quotationdetail->extra_color</td>
-    <td> update </td>
+    <td><a href=?controller=quotationdetail&action=updateForm&QID=$quotationdetail->QID&DetailID=$quotationdetail->DetailID>update</a></td>
     <td> delete </td>
     </tr>";    
 }
