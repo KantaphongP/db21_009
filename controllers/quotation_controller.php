@@ -17,12 +17,12 @@
     public function addQuotation()
     {
         $QID = $_GET['QID'];
-        $date = $_GET['date'];
+        $dates = $_GET['dates'];
         $Staff = $_GET['Name'];
         $customer = $_GET['CName'];
         $Payment_Type = $_GET['Terms'];
         $detail = $_GET['detail'];
-        Quotation::Add($QID,$date,$Staff,$customer,$Payment_Type,$detail);
+        Quotation::Add($QID,$dates,$Staff,$customer,$Payment_Type,$detail);
 
         QuotationController::index();
     }
