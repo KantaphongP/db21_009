@@ -67,7 +67,7 @@ class price_detail{
         require("connection_connect.php");
         $sql ="SELECT Price_detail.PRID,Product.Name,Price_detail.จำนวนเริ่มต้น,Price_detail.จำนวนสุดท้าย,Price_detail.price,Price_detail.สกรีนเพิ่มสีละ 
         FROM Price_detail INNER JOIN Product ON Product.PRID=Price_detail.PRID 
-        Where (Price_detail.PRID LIKE '%$key' OR Product.Name LIKE '%$key%' OR Price_detail.จำนวนเริ่มต้น LIKE '%$key%' OR 
+        Where (Price_detail.PRID LIKE '%$key%' OR Product.Name LIKE '%$key%' OR Price_detail.จำนวนเริ่มต้น LIKE '%$key%' OR 
         Price_detail.จำนวนสุดท้าย LIKE '%$key%' OR Price_detail.price LIKE '%$key%' OR Price_detail.สกรีนเพิ่มสีละ LIKE '%$key%')" ;
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
