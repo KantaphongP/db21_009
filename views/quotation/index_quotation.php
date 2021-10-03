@@ -1,6 +1,14 @@
 <table border = 1>
     
     new quotation <a href="?controller=quotation&action=newQuotation">click</a><br>
+
+    <form method="get"action="">
+        <input type="text" name="key">
+        <input type="hidden" name="controller" value="quotation"/>
+        <button type="submit" name="action" value="search">
+    search</button>
+</form>
+
     <tr>
         <td>QID</td>
         <td>date</td>
