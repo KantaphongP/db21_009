@@ -4,7 +4,7 @@
     <label>Product <select name="PRID">
         <?php foreach($product_list as $product)
             {echo "<option value= $product->PRID";
-                if($product->PRID==$price_detail->PRID){echo "selected='selected'";}
+                if($product->PRID==$price_detail->PRID){echo " selected='selected'";}
                 echo ">$product->Name</option>";
             }?>
         </select></label><br>  
