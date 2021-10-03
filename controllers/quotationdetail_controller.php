@@ -14,7 +14,7 @@
     }
     public function addQuotationDetail()
     {
-        //echo "add" ; 
+        
         $QID = $_GET['QID'];
         $DetailID = $_GET['DetailID']; 
         $PRID = $_GET['PRID']; 
@@ -30,5 +30,16 @@
         $key = $_GET['key'];
         $quotationdetail_list = QuotationDetail::search($key);
         require_once("./views/quotation_detail/index_quotationdetail.php");
+    }
+
+    public function updateForm()
+    {
+            $QID = $_GET['QID'] ; 
+            $DetailID = $_GET['DetailID'] ; 
+            $quotationdetail = QuotationDetail::get($QID,$DetailID) ; 
+            $quotation_list = Quotation::getAll();
+            $product_list = Product::getAll();
+            $productcolor_list = ProductColor::getAll();
+            require_once("./views/quotation_detail/updateForm.php");
     }
 }?>
