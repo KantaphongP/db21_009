@@ -14,5 +14,4 @@
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="addQuotationDetail">Save</button>
     
-    
 </form>
