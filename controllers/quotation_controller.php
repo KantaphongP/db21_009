@@ -13,6 +13,11 @@
         $PaymentTermsList = Payment_Terms::getAll();
         require_once("./views/quotation/newQuotation.php");
     }
+
+    public function updateForm() 
+    {
+        
+    }
     
     public function addQuotation()
     {
@@ -23,7 +28,6 @@
         $Payment_Type = $_GET['Terms'];
         $detail = $_GET['detail'];
         Quotation::Add($QID,$dates,$Staff,$customer,$Payment_Type,$detail);
-
         QuotationController::index();
     }
 
