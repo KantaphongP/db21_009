@@ -1,7 +1,7 @@
 <?php class Payment_Type{
     public $Payment_Type;
 
-    public function __construct($Payment_Types){
+    public function __construct($Payment_Type){
         $this->Payment_Type = $Payment_Type;
         
     }
