@@ -29,7 +29,7 @@
     <td>$quotationdetail->qty</td>
     <td>$quotationdetail->extra_color</td>
     <td><a href=?controller=quotationdetail&action=updateForm&QID=$quotationdetail->QID&DetailID=$quotationdetail->DetailID>update</a></td>
-    <td> delete </td>
+    <td><a href=?controller=quotationdetail&action=deleteConfirm&QID=$quotationdetail->QID&DetailID=$quotationdetail->DetailID>delete</a></td>
     </tr>";    
 }
 echo "</table>";
