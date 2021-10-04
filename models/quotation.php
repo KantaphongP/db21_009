@@ -18,7 +18,6 @@ class Quotation{
     }
     
     public static function get($QID){
-
         require("connection_connect.php");
         $sql = "SELECT Qc.QID , Qc.date AS date_order , Qc.Name AS Staff, Qc.CName AS customer ,Payment_Type.Payment_Type , Qc.detail 
         FROM (SELECT Q.QID , Q.date , Q.Name , Customer.CName ,Q.Payment_Type , Q.detail 
@@ -53,6 +52,7 @@ class Quotation{
         {
             $QID =$my_row[QID];
             $date_order = $my_row[date_order];
+             //echo $date_order ; 
             $Staff = $my_row[Staff];
             $customer =$my_row[customer];
             $Payment_Type = $my_row[Payment_Type];
@@ -100,8 +100,9 @@ class Quotation{
     {
         
         require("connection_connect.php");
-        $sql ="INSERT INTO Quotation(QID,date_order,Staff,customer,Payment_Type,detail) VALUES 
-        ('$QID','$date_order','$Staff','$customer','$Payment_Type','$detail')";
+        //echo $QID ; 
+        $sql ="INSERT INTO Quotation(QID,Quotation.date,Staff,customer,Payment_Type,detail) 
+               VALUES ('$QID','$date_order','$Staff','$customer','$Payment_Type','$detail')";
         $result=$conn->query($sql);
         require("connection_close.php");
         return "Add success $result rows";
@@ -112,8 +113,9 @@ class Quotation{
         //echo "1" ; 
         require("connection_connect.php");
         //echo $extra_color ; 
-        $sql = "UPDATE Quotation SET QID = '$QID' , date_order = '$date_order',Staff = '$Staff',customer = '$customer',Payment_Type = '$Payment_Type',detail = '$detail' 
-        WHERE QID = '$QID' " ;
+        $sql = "UPDATE Quotation 
+                SET QID = '$QID' , Quotation.date = '$date_order',Staff = '$Staff',customer = '$customer',Payment_Type = '$Payment_Type',detail = '$detail' 
+                WHERE QID = '$QID' " ;
         $result=$conn->query($sql);
         //echo $extra_color ; 
         require("connection_close.php");
