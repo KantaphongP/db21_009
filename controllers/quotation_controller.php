@@ -22,7 +22,7 @@
     public function addQuotation()
     {
         $QID = $_GET['QID'];
-        $date = $_GET['date_order'];
+        $date_order = $_GET['date_order'];
         $Staff = $_GET['Staff'];
         $customer = $_GET['customer'];
         $Payment_Type = $_GET['Terms'];
