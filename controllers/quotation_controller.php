@@ -30,7 +30,7 @@
         $date_order = $_GET['date_order'];
         $Staff = $_GET['Staff'];
         $customer = $_GET['customer'];
-        $Payment_Type = $_GET['Terms'];
+        $Payment_Type = $_GET['Payment_Terms'];
         $detail = $_GET['detail'];
         Quotation::update($QID,$date_order,$Staff,$customer,$Payment_Type,$detail);
         QuotationController::index();
@@ -42,7 +42,7 @@
         $date_order = $_GET['date_order'];
         $Staff = $_GET['Staff'];
         $customer = $_GET['customer'];
-        $Payment_Type = $_GET['Terms'];
+        $Payment_Type = $_GET['Payment_Terms'];
         $detail = $_GET['detail'];
         Quotation::Add($QID,$date_order,$Staff,$customer,$Payment_Type,$detail);
         QuotationController::index();
