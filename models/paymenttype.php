@@ -6,18 +6,18 @@
         
     }
     public static function getAll(){
-        $paymenttype_list=[];
+        $PaymentTypeList=[];
         require("connection_connect.php");
         $sql ="SELECT Payment_Type.Payment_Type FROM Payment_Type" ;
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
             $Payment_Type = $my_row[Payment_Type];
-            $paymenttype_list[]= new Payment_Type($Payment_Type);
+            $PaymentTypeList[]= new Payment_Type($Payment_Type);
         }
     
         require("connection_close.php");
-        return $paymenttype_list ;
+        return $PaymentTypeList ;
     }
 }
 ?>
