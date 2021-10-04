@@ -19,13 +19,13 @@
             }
             echo ">$customer->CName</option>";
      }?></select></label><br>
-    <label>Payment_Terms <select name="Payment_Terms">
-      <?php foreach($PaymentTermsList as $Payment_Terms){
-          echo "<option value= $Payment_Terms->Payment_Terms";
-         if($Payment_Terms->Payment_Terms==$quotation->Payment_Terms){
+    <label>Payment_Type <select name="Payment_Type">
+      <?php foreach($paymenttype_list as $Payment_Type){
+          echo "<option value= $Payment_Type->Payment_Type";
+         if($Payment_Type->Payment_Type==$quotation->Payment_Type){
                 echo " selected='selected'" ;
             }
-            echo ">$Payment_Terms->Payment_Terms</option>";
+            echo ">$Payment_Type->Payment_Type</option>";
       }?></select></label><br>
     <label>detail <input type="text" name="detail"
              value="<?php echo $quotation->detail; ?>" /> </label><br>
