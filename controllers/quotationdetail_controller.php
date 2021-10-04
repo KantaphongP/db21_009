@@ -44,15 +44,17 @@
 
     public function update(){
         $QID = $_GET['QID'];
+        echo $QID ;
         //$newID = $_GET['QIDD'] ; 
         $DetailID = $_GET['DetailID'];
+        echo $DetailID ;
         //$newDID = $_GET['DetailIDD'] ;  
         $PRID = $_GET['PRID']; 
+        echo $PRID ; 
         $Product_Color = $_GET['Product_Color']; 
         $qty = $_GET['qty']; 
         $extra_color = $_GET['extra_color'];
-        $up = QuotationDetail::update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color) ; 
-        //echo $up ; 
+        QuotationDetail::update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color) ;  
         QuotationDetailController::index(); 
     }
     public function deleteConfirm(){
@@ -63,10 +65,11 @@
         require_once("./views/quotation_detail/deleteConfirm.php");
     }
     public function delete(){
-       $PriceDetailID = $_GET['PriceDetailID'];
-       $PriceDetailID = $_GET['PriceDetailID'];
-       price_detail::delete($PriceDetailID);
-       PriceDetailController::index();
+       $QID = $_GET['QID'];
+       $Detail = $_GET['DetailID'];
+       echo $DetailID ; 
+       QuotationDetail::delete($QID,$DetailID);
+       QuotationDetailController::index();
     }
 
 }?>

@@ -1,3 +1,7 @@
+<?php
+    echo "กันตพงศ์ ปิตินรเศรษฐ์ 6220504615"
+?>
+<br>
 <table border = 1>
     new quotation_detail <a href="?controller=quotationdetail&action=newQuotationDetail">click</a><br>
     <form method="get" action="">

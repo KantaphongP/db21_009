@@ -11,7 +11,7 @@
             value="<?php echo $quotationdetail->DetailID; ?>" /> </label><br> 
     <label>PRID <select name="PRID">
         <?php foreach($product_list as $product){
-            echo "<option value= $quotation->QID" ;
+            echo "<option value= $product->PRID" ;
             if($product->PRID == $quotationdetail->PRID){
                 echo " selected='selected'" ; 
             }

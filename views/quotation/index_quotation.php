@@ -1,3 +1,7 @@
+<?php
+    echo "กัญญาณัฐ ตั้งเจริญ 6220502060"
+?>
+<br>
 <table border = 1>
     
     new quotation <a href="?controller=quotation&action=newQuotation">click</a><br>

@@ -1,3 +1,7 @@
+<?php
+    echo "ฏิมากานต์ เอกปัจฉิมศิริ 6220504658"
+?>
+<br>
 <table border = 1>
     new price_detail <a href="?controller=pricedetail&action=newPriceDetail">click</a><br>
     <form method="get" action="">
