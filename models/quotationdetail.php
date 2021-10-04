@@ -63,12 +63,12 @@ class QuotationDetail{
         return "add success $result rows";
     }
 
-    public static function update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color){
+    public static function update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color,$newID,$newDID){
         require("connection_connect.php");
         //echo $QID ; echo $DetailID ;echo $PRID ; 
         $sql = "UPDATE Quotation_Detail 
                 SET QID = '$QID' , DetailID = '$DetailID',PRID = '$PRID',Product_Color = '$Product_Color',qty = '$qty',extra_color = '$extra_color' 
-                WHERE QID = '$QID' AND DetailID = '$DetailID'  " ;
+                WHERE QID = '$newID' AND DetailID = '$newDID'  " ;
         $result=$conn->query($sql);
         //echo $extra_color ; 
         require("connection_close.php");
