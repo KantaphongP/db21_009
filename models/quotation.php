@@ -124,7 +124,7 @@ class Quotation{
     {
         //echo "00000";
         require("connection_connect.php");
-        $sql ="DELETE from Quotation WHERE QID='$QID' ";
+        $sql ="DELETE from Quotation WHERE QID='$QID'";
         $result=$conn->query($sql);
         require("connection_close.php");
         return "delete success $result row";
