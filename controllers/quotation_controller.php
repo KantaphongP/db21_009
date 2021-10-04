@@ -16,7 +16,24 @@
 
     public function updateForm() 
     {
-        
+        $QID = $_GET['QID'];
+        $quotation = Quotation::get($QID);
+        $StaffList = Staff::getAll();
+        $CustomerList = Customer::getAll();
+        $PaymentTermsList = Payment_Terms::getAll();
+        require_once("./views/quotation/updateForm.php");
+    }
+
+    public function update()
+    {
+        $QID = $_GET['QID'];
+        $date_order = $_GET['date_order'];
+        $Staff = $_GET['Staff'];
+        $customer = $_GET['customer'];
+        $Payment_Type = $_GET['Terms'];
+        $detail = $_GET['detail'];
+        Quotation::update($QID,$date_order,$Staff,$customer,$Payment_Type,$detail);
+        QuotationController::index();
     }
     
     public function addQuotation()
