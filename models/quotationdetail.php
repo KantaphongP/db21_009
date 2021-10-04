@@ -65,8 +65,10 @@ class QuotationDetail{
     public static function update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color){
         //echo "1" ; 
         require("connection_connect.php");
-        //echo $extra_color ; 
-        $sql = "UPDATE Quotation_Detail SET QID = '$QID' , DetailID = '$DetailID',PRID = '$PRID',Product_Color = '$Product_Color',qty = '$qty',extra_color = '$extra_color' WHERE QID = '$QID' AND DetailID = '$DetailID'" ;
+        echo $QID ; echo $DetailID ;
+        $sql = "UPDATE Quotation_Detail 
+                SET QID = $QID , DetailID = $DetailID,PRID = $PRID,Product_Color = $Product_Color,qty = $qty,extra_color = $extra_color 
+                WHERE QID = $QID AND DetailID = $DetailID ; " ;
         $result=$conn->query($sql);
         //echo $extra_color ; 
         require("connection_close.php");
