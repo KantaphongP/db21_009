@@ -58,7 +58,6 @@
         QuotationDetailController::index(); 
     }
     public function deleteConfirm(){
-      
         $QID = $_GET['QID'] ; 
         $DetailID = $_GET['DetailID'] ; 
         $quotationdetail = QuotationDetail::get($QID,$DetailID) ;
@@ -66,7 +65,7 @@
     }
     public function delete(){
        $QID = $_GET['QID'];
-       $Detail = $_GET['DetailID'];
+       $DetailID = $_GET['DetailID'];
        echo $DetailID ; 
        QuotationDetail::delete($QID,$DetailID);
        QuotationDetailController::index();
