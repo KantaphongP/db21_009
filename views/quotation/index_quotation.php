@@ -27,8 +27,8 @@
      <td>$quotation->customer</td>
      <td>$quotation->Payment_Type</td>
      <td>$quotation->detail</td>
-     <td> update </td>
-     <td><a href=?controller=quotation&action=deleteConfirm&QID=$Quotation->QID>delete</a> </td> </tr>";
+     <td><a href=?controller=quotation&action=updateForm&QID=$quotation->QID>update</a></td>
+     <td><a href=?controller=quotation&action=deleteConfirm&QID=$quotation->QID>delete</a> </td> </tr>";
  }
  echo "</table>";
  ?>
