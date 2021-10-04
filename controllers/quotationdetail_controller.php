@@ -44,13 +44,13 @@
 
     public function update(){
         $QID = $_GET['QID'];
-        echo $QID ;
+        //echo $QID ;
         $newID = $_GET['QIDD'] ; 
         $DetailID = $_GET['DetailID'];
-        echo $DetailID ;
+        //echo $DetailID ;
         $newDID = $_GET['DetailIDD'] ;  
         $PRID = $_GET['PRID']; 
-        echo $PRID ; 
+        //echo $PRID ; 
         $Product_Color = $_GET['Product_Color']; 
         $qty = $_GET['qty']; 
         $extra_color = $_GET['extra_color'];
@@ -66,7 +66,7 @@
     public function delete(){
        $QID = $_GET['QID'];
        $DetailID = $_GET['DetailID'];
-       echo $DetailID ; 
+       //echo $DetailID ; 
        QuotationDetail::delete($QID,$DetailID);
        QuotationDetailController::index();
     }
