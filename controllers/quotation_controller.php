@@ -56,7 +56,7 @@
     }
 
     public function deleteConfirm(){
-        echo " tttttttt ";
+        //echo " tttttttt ";
         $QID = $_GET['QID'];
         $quotation =Quotation::get($QID);
         require_once("./views/quotation/deleteConfirm.php");
