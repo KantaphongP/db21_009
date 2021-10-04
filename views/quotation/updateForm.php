@@ -19,7 +19,7 @@
             }
             echo ">$customer->CName</option>";
      }?></select></label><br>
-    <label>Payment_Terms <select name="Terms">
+    <label>Payment_Terms <select name="Payment_Terms">
       <?php foreach($PaymentList as $Payment_Terms){
           echo "<option value= $Payment_Terms->Terms";
          if($Payment_Terms->Terms==$quotation->Terms){
