@@ -45,16 +45,16 @@
     public function update(){
         $QID = $_GET['QID'];
         echo $QID ;
-        //$newID = $_GET['QIDD'] ; 
+        $newID = $_GET['QIDD'] ; 
         $DetailID = $_GET['DetailID'];
         echo $DetailID ;
-        //$newDID = $_GET['DetailIDD'] ;  
+        $newDID = $_GET['DetailIDD'] ;  
         $PRID = $_GET['PRID']; 
         echo $PRID ; 
         $Product_Color = $_GET['Product_Color']; 
         $qty = $_GET['qty']; 
         $extra_color = $_GET['extra_color'];
-        QuotationDetail::update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color) ;  
+        QuotationDetail::update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color,$newID,$newDID) ;  
         QuotationDetailController::index(); 
     }
     public function deleteConfirm(){
