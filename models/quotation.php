@@ -35,7 +35,7 @@ class Quotation{
         $Payment_Terms = $my_row[Payment_Terms];
         $detail = $my_row[detail];
         require("connection_close.php");
-        return new Quotation($QID,$date,$Staff,$customer,$Payment_Terms,$detail);
+        return new Quotation($QID,$date_order,$Staff,$customer,$Payment_Terms,$detail);
 
     }
 
