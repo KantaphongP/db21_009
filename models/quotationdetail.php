@@ -18,7 +18,7 @@ class QuotationDetail{
     }
 
     public static function get($QID , $DetailID){
-        echo "get" ; 
+        //echo "get" ; 
         require("connection_connect.php");
         $sql ="SELECT * FROM Quotation_Detail WHERE QID = '$QID' AND DetailID = '$DetailID'" ;
         $result=$conn->query($sql);
@@ -26,7 +26,7 @@ class QuotationDetail{
         $QID =$my_row[QID];
         $DetailID = $my_row[DetailID];
         $PRID = $my_row[PRID];
-        echo $PRID ; 
+        //echo $PRID ; 
         $Product_Color =$my_row[Product_Color];
         $qty = $my_row[qty];
         $extra_color = $my_row[extra_color];
@@ -100,9 +100,9 @@ class QuotationDetail{
 
     public static function delete($QID,$DetailID)
     {
-        echo $QID ; echo $DetailID ; 
+        //echo $QID ; echo $DetailID ; 
         require("connection_connect.php");
-        $sql ="DELETE from Quotation_detail WHERE QID = '$QID' AND DetailID = '$DetailID'";
+        $sql ="DELETE from Quotation_Detail WHERE QID = '$QID' AND DetailID = '$DetailID'";
         $result=$conn->query($sql);
         require("connection_close.php");
         return "delete success $result row";
