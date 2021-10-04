@@ -30,7 +30,7 @@
     <label>detail <input type="text" name="detail"
              value="<?php echo $quotation->detail; ?>" /> </label><br>
 
-    <input type="hidden" name="controller" value="quotationde"/>
+    <input type="hidden" name="controller" value="quotation"/>
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="update">update</button>
 </form>
