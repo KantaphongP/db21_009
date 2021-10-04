@@ -8,9 +8,9 @@
 
     public function newQuotation()
     {
-        $StaffList = Staff::getAll();
-        $CustomerList = Customer::getAll();
-        $PaymentTermsList = Payment_Terms::getAll();
+        $staff_list = Staff::getAll();
+        $customer_list = Customer::getAll();
+        $paymenttype_list = Payment_Type::getAll();
         require_once("./views/quotation/newQuotation.php");
     }
 
@@ -20,7 +20,7 @@
         $quotation = Quotation::get($QID);
         $StaffList = Staff::getAll();
         $CustomerList = Customer::getAll();
-        $PaymentTermsList = Payment_Terms::getAll();
+        $PaymentTermsList = Payment_Type::getAll();
         require_once("./views/quotation/updateForm.php");
     }
 
@@ -30,7 +30,7 @@
         $date_order = $_GET['date_order'];
         $Staff = $_GET['Staff'];
         $customer = $_GET['customer'];
-        $Payment_Terms = $_GET['Payment_Terms'];
+        $Payment_Type = $_GET['Payment_Terms'];
         $detail = $_GET['detail'];
         Quotation::update($QID,$date_order,$Staff,$customer,$Payment_Terms,$detail);
         QuotationController::index();
@@ -42,9 +42,9 @@
         $date_order = $_GET['date_order'];
         $Staff = $_GET['Staff'];
         $customer = $_GET['customer'];
-        $Payment_Terms = $_GET['Payment_Terms'];
+        $Payment_Type = $_GET['Payment_Terms'];
         $detail = $_GET['detail'];
-        Quotation::Add($QID,$date_order,$Staff,$customer,$Payment_Terms,$detail);
+        Quotation::Add($QID,$date_order,$Staff,$customer,$Payment_Type,$detail);
         QuotationController::index();
     }
 
