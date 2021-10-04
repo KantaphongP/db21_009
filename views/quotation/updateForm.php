@@ -20,12 +20,12 @@
             echo ">$customer->CName</option>";
      }?></select></label><br>
     <label>Payment_Terms <select name="Payment_Terms">
-      <?php foreach($PaymentList as $Payment_Terms){
-          echo "<option value= $Payment_Terms->Terms";
-         if($Payment_Terms->Terms==$quotation->Terms){
+      <?php foreach($PaymentTermsList as $Payment_Terms){
+          echo "<option value= $Payment_Terms->Payment_Terms";
+         if($Payment_Terms->Payment_Terms==$quotation->Payment_Terms){
                 echo " selected='selected'" ;
             }
-            echo ">$Payment_Terms->Terms</option>";
+            echo ">$Payment_Terms->Payment_Terms</option>";
       }?></select></label><br>
     <label>detail <input type="text" name="detail"
              value="<?php echo $quotation->detail; ?>" /> </label><br>
