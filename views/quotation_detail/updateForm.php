@@ -30,6 +30,8 @@
     <label>extra_color<input type="text" name="extra_color" 
             value="<?php echo $quotationdetail->extra_color; ?>" /> </label><br>
     <input type="hidden" name="controller" value="quotationdetail"/>
+    <input type="hidden" name="QIDD" value="<?php echo $quotationdetail->QID;?>" />
+    <input type="hidden" name="DetailIDD" value="<?php echo $quotationdetail->DetailID;?>" />
     <button type="submit" name="action" value="index">Back</button>
     <button type="submit" name="action" value="update">update</button>
 </form>
