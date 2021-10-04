@@ -22,9 +22,9 @@
     public function addQuotation()
     {
         $QID = $_GET['QID'];
-        $date = $_GET['date_order'];
-        $Staff = $_GET['SID'];
-        $customer = $_GET['CID'];
+        $date_order = $_GET['date_order'];
+        $Staff = $_GET['Staff'];
+        $customer = $_GET['customer'];
         $Payment_Type = $_GET['Terms'];
         $detail = $_GET['detail'];
         Quotation::Add($QID,$date_order,$Staff,$customer,$Payment_Type,$detail);
