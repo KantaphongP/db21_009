@@ -2,9 +2,9 @@
     
     <label>QID <input type="text" name="QID" /> </label><br>
     <label>date_order <input type="text" name="date_order" /> </label><br>
-    <label>Staff <select name="SID">
+    <label>Staff <select name="Staff">
         <?php foreach($StaffList as $Staff){echo "<option value= $Staff->SID>$Staff->Name</option>";}?></select></label><br>
-    <label>Customer <select name="SID">
+    <label>Customer <select name="customer">
         <?php foreach($CustomerList as $Customer){echo "<option value= $Customer->CID>$Customer->CName</option>";}?></select></label><br>
     <label>Payment_Terms <select name="Terms">
         <?php foreach($PaymentTermsList as $Payment_Type){echo "<option value= $Payment_Type->Terms>$Payment_Type->Terms</option>";}?></select></label><br>
