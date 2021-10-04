@@ -18,7 +18,7 @@
         <td>date_order</td>
         <td>Staff</td>
         <td>customer</td>
-        <td>Payment_Type</td>
+        <td>Payment_Terms</td>
         <td>detail</td>
         
         
@@ -29,7 +29,7 @@
      <td>$quotation->date_order</td>
      <td>$quotation->Staff</td>
      <td>$quotation->customer</td>
-     <td>$quotation->Payment_Type</td>
+     <td>$quotation->Payment_Terms</td>
      <td>$quotation->detail</td>
      <td><a href=?controller=quotation&action=updateForm&QID=$quotation->QID>update</a></td>
      <td><a href=?controller=quotation&action=deleteConfirm&QID=$quotation->QID>delete</a> </td> </tr>";
