@@ -52,7 +52,21 @@
         $qty = $_GET['qty']; 
         $extra_color = $_GET['extra_color'];
         $up = QuotationDetail::update($QID,$DetailID,$PRID,$Product_Color,$qty,$extra_color) ; 
-        echo $up ; 
+        //echo $up ; 
         QuotationDetailController::index(); 
     }
+    public function deleteConfirm(){
+      
+        $QID = $_GET['QID'] ; 
+        $DetailID = $_GET['DetailID'] ; 
+        $quotationdetail = QuotationDetail::get($QID,$DetailID) ;
+        require_once("./views/quotation_detail/deleteConfirm.php");
+    }
+    public function delete(){
+       $PriceDetailID = $_GET['PriceDetailID'];
+       $PriceDetailID = $_GET['PriceDetailID'];
+       price_detail::delete($PriceDetailID);
+       PriceDetailController::index();
+    }
+
 }?>
